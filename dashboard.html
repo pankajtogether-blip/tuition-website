@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+if (localStorage.getItem("login") !== "yes") {
+  location.href = "login.html";
+}
+</script>
+
+<h2>🎓 Student Dashboard</h2>
+
+<ul>
+  <li><a href="notes.html">Notes</a></li>
+  <li><a href="exercise.html">Exercises</a></li>
+  <li><a href="important.html">Important Questions</a></li>
+</ul>
+
+<button onclick="logout()">Logout</button>
+
+<script>
+function logout() {
+  localStorage.removeItem("login");
+  location.href="login.html";
+}
+</script>
+
+</body>
+</html>
